@@ -15,25 +15,31 @@ client.on('ready', () => {
 
 client.on('messageCreate', (msg) => {
   if (msg.content === 'nenel') {
-    const numero = Math.floor(Math.random() * 182) + 1;
-    if (numero > 173 && numero !== 177) {
+    const numero = Math.floor(Math.random() * 322) + 1;
+    if (numero > 0 && numero < 12 && numero !== 8) {
       msg.channel.send({
-        files: [
-          `https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.mp4`
-        ]
+        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.mp4`]
       })
-    } else if (numero === 177) {
+    } else if (numero === 8) {
       msg.channel.send({
-        files: [
-          `https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.3gp`
-        ]
+        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.3gp`]
       })
-    } else {
-    msg.channel.send({
-      files: [
-        `https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.jpg`,
-      ],
-    });
-  }
+    } else if ( numero >= 12 && numero <= 63) {
+      msg.channel.send({
+        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.png`]
+      })
+    } else if (numero >= 64 && numero <= 86) {
+      msg.channel.send({
+        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.jpeg`]
+      })
+    } else if (numero === 322) {
+      msg.channel.send({
+        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.gif`]
+      })
+    } else if (numero >= 87) {
+      msg.channel.send({
+        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.jpg`]
+      })
+    }
   }
 });
