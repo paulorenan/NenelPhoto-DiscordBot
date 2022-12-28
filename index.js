@@ -15,7 +15,7 @@ client.on('ready', () => {
 
 client.on('messageCreate', (msg) => {
   if ((msg.content).toLocaleLowerCase() === 'nenel') {
-    const numero = Math.floor(Math.random() * 415) + 1;
+    const numero = Math.floor(Math.random() * 416) + 1;
     if (numero === 1) {
       msg.channel.send({
         files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.gif`]
@@ -39,6 +39,39 @@ client.on('messageCreate', (msg) => {
     } else if (numero > 385) {
       msg.channel.send({
         files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.mp4`]
+      })
+    }
+  }
+  if ((msg.content).toLocaleLowerCase() === 'nenel videos' || (msg.content).toLocaleLowerCase() === 'nenel video') {
+    const numeroVideosArray = []
+    for (i = 385; i <= 416; i++) {
+      numeroVideosArray.push(i);
+    }
+    const numeroArr = Math.floor(Math.random() * 32)
+    if (numeroArr === 0) {
+      msg.channel.send({
+        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numeroVideosArray[numeroArr]}.3gp`]
+      })
+    } else {
+      msg.channel.send({
+        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numeroVideosArray[numeroArr]}.mp4`]
+      })
+    }
+  }
+  if ((msg.content).toLocaleLowerCase() === 'nenel bebado') {
+    const numerobebadoArr = [150, 296, 297, 319, 331, 415, 416]
+    const numeroBeb = Math.floor(Math.random() * 7)
+    if (numeroBeb <= 3) {
+      msg.channel.send({
+        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numerobebadoArr[numeroBeb]}.jpg`]
+      })
+    } else if ( numeroBeb === 4) {
+      msg.channel.send({
+        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numerobebadoArr[numeroBeb]}.png`]
+      })
+    } else {
+      msg.channel.send({
+        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numerobebadoArr[numeroBeb]}.mp4`]
       })
     }
   }
