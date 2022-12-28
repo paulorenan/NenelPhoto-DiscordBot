@@ -15,30 +15,30 @@ client.on('ready', () => {
 
 client.on('messageCreate', (msg) => {
   if ((msg.content).toLocaleLowerCase() === 'nenel') {
-    const numero = Math.floor(Math.random() * 322) + 1;
-    if (numero > 0 && numero < 12 && numero !== 8) {
-      msg.channel.send({
-        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.mp4`]
-      })
-    } else if (numero === 8) {
-      msg.channel.send({
-        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.3gp`]
-      })
-    } else if ( numero >= 12 && numero <= 63) {
-      msg.channel.send({
-        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.png`]
-      })
-    } else if (numero >= 64 && numero <= 86) {
-      msg.channel.send({
-        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.jpeg`]
-      })
-    } else if (numero === 322) {
+    const numero = Math.floor(Math.random() * 415) + 1;
+    if (numero === 1) {
       msg.channel.send({
         files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.gif`]
       })
-    } else if (numero >= 87) {
+    }else if (numero > 1 && numero <= 328) {
       msg.channel.send({
         files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.jpg`]
+      })
+    } else if (numero > 328 && numero <= 383) {
+      msg.channel.send({
+        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.png`]
+      })
+    } else if ( numero === 384) {
+      msg.channel.send({
+        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.webp`]
+      })
+    } else if (numero === 385) {
+      msg.channel.send({
+        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.3gp`]
+      })
+    } else if (numero > 385) {
+      msg.channel.send({
+        files: [`https://raw.githubusercontent.com/paulorenan/NenelPhotoBot/main/fotos/nenel${numero}.mp4`]
       })
     }
   }
