@@ -14,7 +14,7 @@ client.on('ready', () => {
 });
 
 client.on('messageCreate', (msg) => {
-  if (msg.content === 'nenel') {
+  if ((msg.content).toLocaleLowerCase() === 'nenel') {
     const numero = Math.floor(Math.random() * 322) + 1;
     if (numero > 0 && numero < 12 && numero !== 8) {
       msg.channel.send({
